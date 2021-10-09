@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>eShop</title>
+	<script src="script.js"></script>
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body onload="onLoad()">
+	<header>
+		<input type="text" class="goods-search" />
+		<button onclick="filterOnClick()" class="search-button" type="button">Искать</button>
+		<button class="cart-button" type="button">Корзина</button>
+	</header>
+	<main>
+		<div class="goods-list"></div>
+		<div>
+			<form>
+				<label>Имя</label><input type="text" pattern="[а-яёА-Я ]{1,}|[A-Za-z]{1,}" required />
+				<label>Телефон</label><input type="text" pattern="\+7\([0-9]{3}\)[0-9]{3}-[0-9]{4}" required />
+				<label>e-mail</label><input type="text" pattern="^([a-z0-9_\.-]+)@([a-z0-9_\.-]+)\.([a-z\.]{2,6})$"
+					required />
+				<label>текст</label><input type="text" />
+				<input type="submit" title="отправить" />
+			</form>
+		</div>
+	</main>
+</body>
+
+</html>
