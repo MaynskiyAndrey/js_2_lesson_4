@@ -1,4 +1,3 @@
-let searchInput;
 const makeGETRequest = (url) => {
 	return new Promise((resolve, reject) => {
 		var xhr;
@@ -155,15 +154,12 @@ const basket = new Basket();
 	console.log(result);
 
 
-	//основной код работы
-	list.fetchGoods().then(() => list.render());
+//основной код работы
+list.fetchGoods().then(() => list.render());
 
-	basket.fetchGoods();
+basket.fetchGoods();
 
-	searchInput = document.getElementsByClassName('goods-search')[0];
-
-//const searchInput = document.GetElementByClass('goods-search');
-//const searchInput = document.getElementsByClassName('goods-search');
+let searchInput = document.querySelector(".goods-search");
 
 function filterOnClick() {
 	const value = searchInput.value;
