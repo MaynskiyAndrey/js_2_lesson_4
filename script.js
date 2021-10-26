@@ -91,7 +91,7 @@ class Basket {
 		this.items.push(newItem);
 	}
 	removeItem(goodsItem) {
-		let index = this.items.indexOf(s => s.goodItem == goodsItem);
+		let index = this.items.indexOf(s => s.goodItem === goodsItem);
 		if (index > 1) {
 			this.items.slice(index, 1);
 		}
@@ -99,7 +99,7 @@ class Basket {
 
 	getSummCost() {
 		const result = 0;
-		this.items.forEach((item, index, array) => {
+		this.items.reduce((item, index, array) => {
 			result += item.goodItem.price * item.count;
 		})
 
@@ -124,8 +124,6 @@ class BasketItem {
 const list = new GoodsList();
 const basket = new Basket();
 
-
-function onLoad() {
 
 
 	const text = `Повседневная aren't практика показывает, что рамки и место обучения кадров способствует подготовки и реализации направлений прогрессивного развития. Не следует, однако забывать, что новая модель организационной деятельности представляет собой интересный эксперимент проверки позиций, занимаемых участниками в отношении поставленных задач. С другой стороны начало повседневной работы по формированию позиции в значительной степени обуславливает создание позиций, занимаемых участниками в отношении поставленных задач.
@@ -163,7 +161,6 @@ function onLoad() {
 	basket.fetchGoods();
 
 	searchInput = document.getElementsByClassName('goods-search')[0];
-};
 
 //const searchInput = document.GetElementByClass('goods-search');
 //const searchInput = document.getElementsByClassName('goods-search');
