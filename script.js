@@ -166,7 +166,6 @@ const basket = new Basket();
 //const searchInput = document.getElementsByClassName('goods-search');
 
 function filterOnClick() {
-	//searchButton.addEventListener('click', (e) => {
 	const value = searchInput.value;
 	list.filterGoods(value);
-};//);
+};
